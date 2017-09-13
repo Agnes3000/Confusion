@@ -43,3 +43,7 @@ body{
 .navbar-inverse {
      background-color: #512DA8;
 }
+
+.navbar-toggler-icon {
+    color: #D1C4E9
+}
