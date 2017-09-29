@@ -98,6 +98,16 @@
                     </a>
 					<!--  left and right controls !-->
                     </div>
+                    <!--  play & stop button !-->
+                    <div class="btn-group" id="carouselButtons">
+	                    <button class="btn btn-danger btn-sm" id="carousel-pause">
+	                	    <span class="fa fa-pause"></span>
+	                    </button>
+	                    <button class="btn btn-danger btn-sm" id="carousel-play">
+	                	    <span class="fa fa-play"></span>
+	                    </button>
+                	</div>
+                    <!--  play & stop button !-->
 	            </div>
             </div>
        </div>
@@ -288,5 +298,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
-
+<script>
+    $(document).ready(function(){
+        $("#mycarousel").carousel( { interval: 2000 } );
+        $("#carousel-pause").click(function(){
+            $("#mycarousel").carousel('pause');
+        });
+        $("#carousel-play").click(function(){
+            $("#mycarousel").carousel('cycle');
+        });
+    });
+</script>
 </html>
